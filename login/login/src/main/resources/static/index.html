@@ -10,22 +10,18 @@
     <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
     <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        $.get("/user", function(data) {
-            $("#user").html(data.name);
-            $(".unauthenticated").hide();
-            $(".authenticated").show();
-        });
-    </script>
+    <script type="text/javascript" src="/js/loginController.js"></script>
 </head>
 <body>
-	<h1>Demo Demo</h1>
-    <div class="container"></div>
+	<h1>Wookim boiler project</h1>
     <div class="container unauthenticated">
-        With GitHub: <a href="/oauth2/authorization/github">click here</a>
+        With GitHub: <button id = 'login-btn'>login</button>
     </div>
     <div class="container authenticated" style="display:none">
         Logged in as: <span id="user"></span>
+    </div>
+    <div class ="container authenticated">
+        <button id ="logout-btn">logout</button>
     </div>
 </body>
 </html>
