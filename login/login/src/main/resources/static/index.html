@@ -11,11 +11,12 @@
     <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/js/loginController.js"></script>
+    <script type="text/javascript" src="/js/EventHandler.js"></script>
 </head>
 <body>
 	<h1>Wookim boiler project</h1>
     <div class="container unauthenticated">
-        With GitHub: <button id = 'login-btn'>login</button>
+        With GitHub: <button id = 'login-btn'><a href="/oauth2/authorization/github">login</a></button>
     </div>
     <div class="container authenticated" style="display:none">
         Logged in as: <span id="user"></span>

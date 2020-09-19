@@ -9,11 +9,13 @@ document.addEventListener('DOMContentLoaded', dom => { // document.ready 역할 
     // 로그아웃 버튼 클릭 이벤트 바인딩
     let loginBtn = document.getElementById('login-btn')
     loginBtn.addEventListener('click', async login => {
+        location.href ='http://localhost:8080/login/oauth2/code/github'
         let response = await fetch('/user');
-        let json = await response.json()
+        let json = await response.json();
+
+        document.getElementById('user').innerHTML = await json.name;
         document.querySelectorAll('.unauthenticated')[0].style.visibility = 'hidden';
         document.querySelectorAll('.authenticated')[0].style.display = 'block';
-        document.getElementById('user').innerHTML = json.name
     })
     // 로그아웃 버튼 클릭 이벤트 바인딩
     let logoutBtn = document.getElementById('logout-btn')
