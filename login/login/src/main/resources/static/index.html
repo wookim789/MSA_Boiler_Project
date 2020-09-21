@@ -12,17 +12,34 @@
     <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/js/loginController.js"></script>
     <script type="text/javascript" src="/js/EventHandler.js"></script>
+    <link rel="stylesheet" href="css/modal.css">
 </head>
 <body>
-	<h1>Wookim boiler project</h1>
-    <div class="container unauthenticated">
-        With GitHub: <button id = 'login-btn'><a href="/oauth2/authorization/github">login</a></button>
+    <h1>Wookim boiler project</h1>
+    <div>
+        <button id="singup-btn">sing up</button>
+        <button id="login-btn">login</button>
+        <button id="logout-btn">logout</button>
     </div>
-    <div class="container authenticated" style="display:none">
-        Logged in as: <span id="user"></span>
-    </div>
-    <div class ="container authenticated">
-        <button id ="logout-btn">logout</button>
-    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class = "user-infomation-form">
+                <h4>Id</h4>
+                <textarea id ="user-id-text"></textarea>
+                <h4>password</h4>
+                <textarea id ="user-pw-text"></textarea>
+                <h4>email</h4>
+                <textarea id ="user-email-text"></textarea>
+          </div>
+          <footer>
+              <button id ="singup-to-server-btn">sign up</button>
+              <button id ="cancle-sign-btn">cancle</button>
+          </footer>
+        </div>
+      </div>
 </body>
 </html>
