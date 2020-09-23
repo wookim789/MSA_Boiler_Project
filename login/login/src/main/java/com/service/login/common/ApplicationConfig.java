@@ -1,4 +1,4 @@
-package com.service.login.configure;
+package com.service.login.common;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

@@ -28,11 +28,20 @@ document.addEventListener('DOMContentLoaded', dom => { // document.ready 역할 
     // 로그인 버튼 클릭 이벤트 바인딩
     let loginBtn = document.getElementById('login-btn');
     loginBtn.addEventListener('click', async b => {
-        eventHandler.login();
+        eventHandler.openLoginModal();
     })
+
     // 로그아웃 버튼 클릭 이벤트 바인딩
     let logoutBtn = document.getElementById('logout-btn');
     logoutBtn.addEventListener('click', b => {
         eventHandler.logout();
     })
+
+    // 로그인 모달창의 로그인 버튼 클릭 이벤트 바인딩
+    let loginRequestBtn = document.getElementById('login-to-server-btn');
+    loginRequestBtn.addEventListener('click', async b => {
+        eventHandler.login();
+    })
+
+
 })
